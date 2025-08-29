@@ -1,0 +1,92 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #f0f8ff, #cde7f0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Heading */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input field */
+#PokemonName {
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 250px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#PokemonName:focus {
+    border-color: #2c6ecb;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ab8;
+}
+
+/* Pokémon image */
+#PokemonSprite {
+    margin-top: 30px;
+    width: 200px;
+    height: auto;
+    animation: fadeIn 0.5s ease-in-out;
+    border: 4px solid #4a90e2;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    #PokemonName {
+        width: 100%;
+    }
+
+    #PokemonSprite {
+        width: 100%;
+        max-width: 300px;
+    }
+}
